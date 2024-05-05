@@ -1,7 +1,5 @@
 # Gesture_controlled_mobile_robotic_arm
-Designed and built a 6DOF Rover and Robotic Arm powered by Jetson Nano. The Ardupilot platform was utilized to control the movements and actions of the mobile robotic arm. Trained a Gesture Recognition Model in Python through OpenCV, Tensorflow and mediapipe and integrating it into the Robotic Arm.
-
-https://github.com/RenukuntaMeghana/Gesture_controlled_mobile_robotic_arm/assets/164230257/1b80f7aa-a3b4-415d-a734-f09e45913254
+Developed and devised a 6DOF Rover and Robotic Arm, powered by the Jetson Nano. The Ardupilot platform was utilized to manage their movements and actions. Additionally, a Gesture Recognition Model was trained using Python libraries like OpenCV, TensorFlow, and Mediapipe, and seamlessly integrated into the functionality of the Robotic Arm.
 
 ## Comprehensive Project Overview: Gesture-Controlled Mobile Robotic Arm
 
@@ -50,60 +48,3 @@ This document outlines the complete project for a mobile robotic arm controlled 
     * Right hand gestures: Commands are sent via DroneKit-Python to control the **simulated** rover.
     * Left hand gestures: Commands are sent via SMBus to control the robotic arm movements.
 
-**Additional Considerations:**
-
-* The `hand-gesture-recognition-using-mediapipe` repository offers finger gesture recognition as well.
-* The project can be further enhanced by exploring alternative machine learning models like CNNs for potentially better gesture recognition accuracy, especially for complex gestures.
-
-This comprehensive overview provides a detailed explanation of each component's functionality and how they work together to achieve the project's objective: a mobile robotic arm controlled by intuitive hand gestures. 
-
-**Requirements**
-To run the program, you need the following dependencies:
-● mediapipe 0.8.1
-● OpenCV 3.4.2 or later
-● Tensorflow 2.3.0 or later
-● tf-nightly 2.5.0.dev or later (required only for creating a TFLite model with
-LSTM)
-● scikit-learn 0.23.2 or later (optional, for displaying the confusion matrix)
-● matplotlib 3.3.2 or later (optional, for displaying the confusion matrix)
-
-
-## Run the Gesture-Controlled Rover Demo!
-Ready to take control of your rover with your hand gestures?  Here's how to run the demo using your webcam:
-
-**1. Open your terminal:**
-Locate your terminal application and launch it. 
-
-**2. Navigate to the project directory:**
-Use the `cd` command to navigate to the directory where the project files are stored. For example, if your files are in a folder named example "gesture_control_rover" on your desktop, you would type:
-
-**3. Run the demo:**
-Execute the following command to start the demo:
-python Gesture_app.py
-
-**4. Control the Rover with Hand Gestures:**
-A window will appear showing your webcam feed with a boundary box around your hand. Position your hand within the box to control the rover's movements:
-
-* **Move Upward:** Makes the rover move forward.
-* **Move Downward:** Makes the rover move backward.
-* **Move Left:** Makes the rover turn left.
-* **Move Right:** Makes the rover turn right.
-
-**5. Customize the Demo (Optional):**
-The demo offers several options for customization. You can use the following flags with the `python app.py` command:
-
-* `--device`: Specify the camera device number (default: 0)
-* `--width`: Set the width of the camera capture (default: 960)
-* `--height`: Set the height of the camera capture (default: 540)
-* `--use_static_image_mode`: Enable static image mode for MediaPipe inference (default: off)
-* `--min_detection_confidence`: Adjust the minimum detection confidence threshold (default: 0.5)
-* `--min_tracking_confidence`: Adjust the minimum tracking confidence threshold (default: 0.5)
-
-**Example with Customization:**
-```
-python app.py --width=640 --height=480 --min_detection_confidence=0.7
-```
-
-This example sets the camera capture resolution to 640x480 and increases the minimum detection confidence for a more robust gesture recognition.
-
-**Have fun controlling your rover with the power of hand gestures!**
